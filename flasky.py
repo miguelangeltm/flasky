@@ -11,6 +11,9 @@ def say_hello():
 def new_route():
     return jsonify({"msg": "This message was added 15 minutes after the first successful pipeline execution."})
 
+@app.route("/hello3", methods=["GET"])
+def new_route():
+    return jsonify({"msg": "This message was added after the second successful jenkins pipeline execution."})
 
 
 if __name__ == "__main__":
