@@ -7,6 +7,11 @@ app = Flask(__name__)
 def say_hello():
     return jsonify({"msg": "Hello, I'm Flasky"})
 
+@app.route("/hello2", methods=["GET"])
+def new_route():
+    return jsonify({"msg": "This message was added 15 minutes after the first successful pipeline execution."})
+
+
 
 if __name__ == "__main__":
     # Please do not set debug=True in production
